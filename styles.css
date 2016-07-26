@@ -1,0 +1,38 @@
+body {
+	background-image: url(https://static.pexels.com/photos/2855/landscape-mountains-nature-lake.jpg);
+	height:100%;
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;	
+}
+
+@media (min-width: 1200px) { 
+	body {
+		color: red;
+	}
+ }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+	body {
+		color: blue;
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	body {
+		color: orange;
+	}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
