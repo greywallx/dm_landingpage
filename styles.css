@@ -2,19 +2,18 @@
 flex-direction: column;
 justify-content: center;
 align-items:center;*/
-
 @-ms-viewport{
-			width:device-width;
-			zoom:1;
-		}
-		@-o-viewport{
-			width:device-width;
-			zoom:1;
-		}
-		@viewport{
-			width:device-width;
-			zoom:1;
-		}
+	width:device-width;
+	zoom:1;
+}
+@-o-viewport{
+	width:device-width;
+	zoom:1;
+}
+@viewport{
+	width:device-width;
+	zoom:1;
+}
 
 html { 
   background: url(http://ecozenusa.com/wp-content/uploads/2012/02/World-Map-2.jpg) no-repeat center center fixed; 
@@ -26,44 +25,123 @@ html {
   background-position: 0 50px;
 }
 
-/*font-size: 16px;
+input{
+	border-radius: 5px;
+	height:20px;
+}
+
+.form_title{
+	font-style: sans-serif;
+	font-size:20px;
+}
+
+/* CONTACT & CALL BACK BUTTON*/
+
+#modal_wrapper.overlay:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: #000;
+  background: rgba(0,0,0,0.7);
+}
+
+#modal_window {
+  display: none;
+  z-index: 200;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 360px;
+  overflow: auto;
+  padding: 10px 20px;
+  background: #fff;
+  border: 5px solid #999;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  color:#3da6dd;
+  font-size: 16px;
   font-family: "Helvetica Neue", sans-serif;
-  margin: 0;*/
+}
 
+#modal_wrapper.overlay #modal_window {
+  display: block;
+}
 
+/*MORE-INFO BUTTON*/
 
-  #modal_wrapper.overlay:before {
-    content: " ";
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    background: #000;
-    background: rgba(0,0,0,0.7);
-  }
+#info_wrapper.overlay:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: #000;
+  background: rgba(0,0,0,0.7);
+}
 
-  #modal_window {
-    display: none;
-    z-index: 200;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    width: 360px;
-    overflow: auto;
-    padding: 10px 20px;
-    background: #fff;
-    border: 5px solid #999;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
+#info_window {
+  display: none;
+  z-index: 200;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 360px;
+  overflow: auto;
+  padding: 10px 20px;
+  background: #fff;
+  border: 5px solid #999;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  color:#3da6dd;
+  font-size: 16px;
+  font-family: "Helvetica Neue", sans-serif;
+}
 
-  #modal_wrapper.overlay #modal_window {
-    display: block;
-  }
+#info_wrapper.overlay #info_window {
+  display: block;
+}
 
+/*CALL-BACK BUTTON*/
+#modal_wrapper_cb.overlay:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: #000;
+  background: rgba(0,0,0,0.7);
+}
 
+#modal_window_cb {
+  display: none;
+  z-index: 200;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 360px;
+  overflow: auto;
+  padding: 10px 20px;
+  background: #fff;
+  border: 5px solid #999;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  color:#3da6dd;
+  font-size: 16px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+#modal_wrapper_cb.overlay #modal_window_cb {
+  display: block;
+}
+/*END OF BUTTONS*/
 
 .header_left{
 	float:left;
@@ -79,91 +157,19 @@ html {
 
 .main {
 	position: absolute;
-  width: 400px;
-  height: 200px;
+  width: 330px;
+  height: 50px;
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: -100px 0 0 -150px;
-}
-
-.footer {
-	position:bottom;
+  margin: auto;
+  clear:both;
 }
 
 .section {
 	clear: both;
 	padding: 0px;
 	margin: 0px;
-}
-
-/*  COLUMN SETUP  */
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-.col:first-child { margin-left: 0; }
-
-/*  GROUPING  */
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
-/*  GRID OF SIX  */
-.span_6_of_6 {
-	width: 100%;
-}
-
-.span_5_of_6 {
-  	width: 83.06%;
-}
-
-.span_4_of_6 {
-  	width: 66.13%;
-}
-
-.span_3_of_6 {
-  	width: 49.2%;
-}
-
-.span_2_of_6 {
-  	width: 32.26%;
-}
-
-.span_1_of_6 {
-  	width: 15.33%;
-}
-
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
-}
-
-@media (min-width: 1200px) { 
-	body {
-		color: red;
-	}
- }
- 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
-	body {
-		color: blue;
-	}
-}
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-	body {
-		color: orange;
-	}
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-
 }
 
 .action_button {
@@ -212,4 +218,146 @@ html {
   -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.submit {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 8px 20px;
+  border: 2px solid #8c8c8c;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  font: normal normal bold 16px/normal Tahoma, Geneva, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(140,140,140,1);
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.x_submit {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
+  border: 2px solid #8c8c8c;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  font: normal normal bold 16px/normal Tahoma, Geneva, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(140,140,140,1);
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#footer_title{
+  text-align: center;
+  font-style: sans-serif;
+  font-size: 30px;
+}
+#footer{
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 650px;
+  clear:both;
+  align-self: flex-end;
+}
+
+.company_container{
+  top:80%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF SIX  */
+.span_6_of_6 {
+	width: 100%;
+}
+
+.span_5_of_6 {
+  	width: 83.06%;
+}
+
+.span_4_of_6 {
+  	width: 66.13%;
+}
+
+.span_3_of_6 {
+  	width: 49.2%;
+}
+
+.span_2_of_6 {
+  	width: 32.26%;
+}
+
+.span_1_of_6 {
+  	width: 15.33%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+}
+
+@media (min-width: 1200px) { 
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+ }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
 }

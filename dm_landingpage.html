@@ -7,66 +7,112 @@
 	<title></title>
 </head>
 <body>
-	<div class="header_right">
-		<p><button id="modal_open" class="action_button">Contact Us</button></p>
-
-		<!-- <input type="button" class="action_button" value="Contact Us">  -->
-	</div>
-	<!-- <p><button id="modal_open">Open Email Form</button></p> -->
-
-<div id="modal_wrapper">
-	<div id="modal_window">
-
-	<div style="text-align: right;"><a id="modal_close" href="#">close <b>X</b></a></div>
-
-<p>Sign-up to receive exclusive prices and information on our services directly in your inbox.</p>
-
-<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
-<p><label>First Name<strong>*</strong><br>
-<input type="text" autofocus required size="38" name="firstname" value=""></label></p>
-<p><label>Last Name<strong>*</strong><br>
-<input type="text" autofocus required size="38" name="lastname" value=""></label></p>
-<p><label>Email Address<strong>*</strong><br>
-<input type="email" required title="Please enter a valid email address" size="38" name="email" value=""></label></p>
-<p><label>Company Name<strong>*</strong><br>
-<input type="text" size="38" name="company" value=""></label></p>
-<p><label>Enquiry<strong>*</strong><br>
-<textarea required name="message" cols="38" rows="8"></textarea></label></p>
-<p><input type="submit" name="feedbackForm" value="Send Message"></p>
-</form>
-
-</div> <!-- #modal_window -->
-</div> <!-- #modal_wrapper -->
-	
-
-
-	<div class="wrap">
-	<div class="header_right">
-		<input type="button" class="action_button" value="Contact Us"> 
-	</div>
-	<div class="header_right"
-		<input type="button" class="action_button" value="Login">
-	</div>
+<!-- LOGO -->
 	<div class="header_left">
 		<a id="logo">
-  		<img src="logo-small.png" alt="Domie Nova" />
+  		<img src="logo-small.png" alt="Domie Nova"/>
 		</a>
 	</div>
-	<div class="main">
-		<input type="button" class="center_action" value="More Info"/>
-		<input type="button" class="center_action" value="Request call-back"/>
+<!-- LOGIN- NO FUNCTIONALITY YET -->
+	<div class="header_right">
+		<input type="button" class="action_button" value="Login">
+	</div>
+<!-- CONTACT BUTTON & FORM-->
+	<div class="header_right">
+		<input id="modal_open" type="button" class="action_button" value="Contact Us"> 
 	</div>
 
-	<div class="col span_1_of_6">
-	<!-- 1 of 6 -->
+	<div id="modal_wrapper">
+		<div id="modal_window">
+		<div style="text-align: right;"><a id="modal_close" href="#"> <b class="x_submit">X</b></a>
+		</div>
+		<p>Sign-up to receive exclusive prices and information on our services directly in your inbox.</p>
+			<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
+				<p><label>First Name<strong>*</strong><br>
+					<input type="text" autofocus required size="38" name="firstname" value=""></label></p>
+				<p><label>Last Name<strong>*</strong><br>
+					<input type="text" autofocus required size="38" name="lastname" value=""></label></p>
+				<p><label>Email Address<strong>*</strong><br>
+					<input type="email" required title="Please enter a valid email address" size="38" name="email" value=""></label></p>
+				<p><label>Company Name<strong>*</strong><br>
+					<input type="text" size="38" name="company" value=""></label></p>
+				<p><label>Phone Number<strong>*</strong><br>
+					<input type="text" size="38" name="phonenumber" value=""></label></p>
+				<p><label>Enquiry<strong>*</strong><br>
+					<textarea required name="message" cols="38" rows="4"></textarea></label></p>
+				<p><input class="submit" type="submit" name="feedbackForm" value="Send Message"></p>
+			</form>
+	</div> <!-- #modal_window -->
+</div> <!-- #modal_wrapper -->
+
+<!-- END OF CONTACT BUTTON/FORM -->
+
+<!-- CALL-BACK BUTTON, SAME FORM AS CONTACT, USING ID MODAL_HEADER & DIFFERENT FORM MESSAGE -->
+	<div>
+			<input id="modal_open_cb" type="button" class="center_action" value="Request Call-Back"/>
 	</div>
-	<div class="col span_1_of_6">
-	<!-- 1 of 6 -->
+
+<div id="modal_wrapper_cb">
+	<div id="modal_window_cb">
+		<div style="text-align: right;"><a id="modal_close_cb" href="#"><b class="x_submit">X</b></a></div>
+		<p>You can reach us at 888-502-3303 or fill in the form below and we will be in touch shortly.</p>
+		<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
+			<p><label>First Name<strong>*</strong><br>
+				<input type="text" autofocus required size="38" name="firstname" value=""></label></p>
+			<p><label>Last Name<strong>*</strong><br>
+				<input type="text" autofocus required size="38" name="lastname" value=""></label></p>
+			<p><label>Email Address<strong>*</strong><br>
+				<input type="email" required title="Please enter a valid email address" size="38" name="email" value=""></label></p>
+			<p><label>Company Name<strong>*</strong><br>
+				<input type="text" size="38" name="company" value=""></label></p>
+			<p><label>Enquiry<strong>*</strong><br>
+				<textarea required name="message" cols="38" rows="4"></textarea></label></p>
+			<p><input class="submit" type="submit" name="feedbackForm" value="Send Message"></p>
+		</form>
+	</div> <!-- #modal_window -->
+</div> <!-- #modal_wrapper -->
+
+<!-- END OF CALL-BACK BUTTON/FORM -->
+
+<!-- MORE-INFO BUTTON, INFO_* ID -->
+
+<div class="main">
+	<input id="info_open" type="button" class="center_action" value="More Info"/>
+</div>
+
+<div id="info_wrapper">
+	<div id="info_window">
+		<div style="text-align: right;"><a id="info_close" href="#"><b>X</b></a></div>
+		<p>Sign-up to receive exclusive prices and information on our services directly in your inbox.</p>
+		<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
+			<p><label>First Name<strong>*</strong><br>
+				<input type="text" autofocus required size="38" name="firstname" value=""></label></p>
+			<p><label>Last Name<strong>*</strong><br>
+				<input type="text" autofocus required size="38" name="lastname" value=""></label></p>
+			<p><label>Email Address<strong>*</strong><br>
+				<input type="email" required title="Please enter a valid email address" size="38" name="email" value=""></label></p>
+			<p><label>Company Name<strong>*</strong><br>
+				<input type="text" size="38" name="company" value=""></label></p>
+			<p><input class="submit" type="submit" name="feedbackForm" value="Send Message"></p>
+		</form>
+	</div> <!-- #info_window -->
+</div> <!-- #info_wrapper -->
+
+<!-- END OF MORE-INFO BUTTON/FORM -->
+
+<div class="company_container">
+	<p id="footer_title">Companies Using DomieNova</p>
+	<div>
+		<img id="footer" src="morrison_logo.jpg"/>
 	</div>
-	<div class="footer">
-	HELLO WORLD
+	<div>
+		<img id="footer" src="3734.jpg"/>
+	</div>
+	<div>
+		<img id="footer" src="logo_(1).png"/>
 	</div>
 </div>
 <script src="script.js"></script>
+<script src="callback.js"></script>
 </body>
 </html>

@@ -28,10 +28,10 @@ var checkForm = function(e)
   };
 
 
-  var modal_init = function() {
+  var modal_init_cb = function() {
 
-    var modalWrapper = document.getElementById("modal_wrapper");
-    var modalWindow  = document.getElementById("modal_window");
+    var modalWrapper = document.getElementById("modal_wrapper_cb");
+    var modalWindow  = document.getElementById("modal_window_cb");
 
     var openModal = function(e)
     {
@@ -54,7 +54,7 @@ var checkForm = function(e)
     var clickHandler = function(e) {
       if(!e.target) e.target = e.srcElement;
       if(e.target.tagName == "DIV") {
-        if(e.target.id != "modal_window") closeModal(e);
+        if(e.target.id != "modal_window_cb") closeModal(e);
       }
     };
 
@@ -63,13 +63,13 @@ var checkForm = function(e)
     };
 
     if(document.addEventListener) {
-      document.getElementById("modal_open").addEventListener("click", openModal, false);
-      document.getElementById("modal_close").addEventListener("click", closeModal, false);
+      document.getElementById("modal_open_cb").addEventListener("click", openModal, false);
+      document.getElementById("modal_close_cb").addEventListener("click", closeModal, false);
       document.addEventListener("click", clickHandler, false);
       document.addEventListener("keydown", keyHandler, false);
     } else {
-      document.getElementById("modal_open").attachEvent("onclick", openModal);
-      document.getElementById("modal_close").attachEvent("onclick", closeModal);
+      document.getElementById("modal_open_cb").attachEvent("onclick", openModal);
+      document.getElementById("modal_close_cb").attachEvent("onclick", closeModal);
       document.attachEvent("onclick", clickHandler);
       document.attachEvent("onkeydown", keyHandler);
     }
@@ -78,9 +78,9 @@ var checkForm = function(e)
 
   if(document.addEventListener) {
     document.getElementById("modal_feedback").addEventListener("submit", checkForm, false);
-    document.addEventListener("DOMContentLoaded", modal_init, false);
+    document.addEventListener("DOMContentLoaded", modal_init_cb, false);
   } else {
     document.getElementById("modal_feedback").attachEvent("onsubmit", checkForm);
-    window.attachEvent("onload", modal_init);
+    window.attachEvent("onload", modal_init_cb);
   }
 
